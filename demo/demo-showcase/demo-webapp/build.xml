@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="demo build" basedir="." default="copy-war">
+	<target name="copy-war">
+		<property name="file.name" value="demo-webapp.war" />
+		<property name="target.path" value="G:\was\wildfly-8.1.0.Final\standalone\deployments\" />
+		
+		<delete file="${target.path}/${file.name}"/>
+		<delete file="${target.path}/${file.name}.deployed"/>
+		<delete file="${target.path}/${file.name}.failed"/>
+				
+		<copy todir="${target.path}" verbose="true">
+		    <fileset dir="${basedir}/target" >
+		      <include name="${file.name}"/>
+		    </fileset>
+		</copy>
+		
+	</target>
+</project>
