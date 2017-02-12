@@ -66,7 +66,8 @@ public class ComponentView extends Composite implements ComponentPresenter.View 
 			public void onClick(ClickEvent event) {
 				
 				//notificationManager.addNotification( new NotificationEvent( message, NotificationType.WARNING ) );
-				Notify.notify("알림", "noti!!!", IconType.INFO, NotifyType.SUCCESS);
+				//Notify.notify("", "noti!!!", IconType.CHECK_CIRCLE_O, NotifyType.SUCCESS);
+				Notify.notify("", "noti!!!", "pficon pficon-ok", NotifyType.SUCCESS);
 				/*
 				tNotiView.setPopupPosition(100, 100);
 				tNotiView.setNotification("noti!!!!");
