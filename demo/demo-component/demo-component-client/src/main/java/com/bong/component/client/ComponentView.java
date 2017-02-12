@@ -4,20 +4,17 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-
 import org.gwtbootstrap3.client.ui.Button;
 import org.gwtbootstrap3.client.ui.Label;
-import org.gwtbootstrap3.client.ui.constants.IconType;
 import org.gwtbootstrap3.extras.notify.client.constants.NotifyType;
 import org.gwtbootstrap3.extras.notify.client.ui.Notify;
+import org.gwtbootstrap3.extras.notify.client.ui.NotifySettings;
 import org.uberfire.client.workbench.widgets.notifications.NotificationManager;
-import org.uberfire.workbench.events.NotificationEvent;
-import org.uberfire.workbench.events.NotificationEvent.NotificationType;
+
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.FlowPanel;
 
 @Dependent
 public class ComponentView extends Composite implements ComponentPresenter.View {
@@ -67,6 +64,9 @@ public class ComponentView extends Composite implements ComponentPresenter.View 
 				
 				//notificationManager.addNotification( new NotificationEvent( message, NotificationType.WARNING ) );
 				//Notify.notify("", "noti!!!", IconType.CHECK_CIRCLE_O, NotifyType.SUCCESS);
+				
+				//NotifySettings settings = NotifySettings.newSettings();
+				//settings.setShowProgressbar(true);
 				
 				//pficon-error-circle-o
 				//pficon-warning-triangle-o, pficon-ok
