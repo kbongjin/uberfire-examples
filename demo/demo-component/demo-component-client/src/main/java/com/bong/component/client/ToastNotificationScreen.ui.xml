@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+
+  <gwt:HTMLPanel>
+    <div class="toast-pf toast-pf-max-width toast-pf-top-right alert alert-success alert-dismissable">
+	  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+	    <span class="pficon pficon-close"></span>
+	  </button>
+	  <div class="pull-right toast-pf-action">
+	    <a href="#">Start Server</a>
+	  </div>
+	  <span class="pficon pficon-ok"></span>
+	  <strong>server_abc</strong> has been added to main server group.
+	</div>
+
+  </gwt:HTMLPanel>
+
+</ui:UiBinder>

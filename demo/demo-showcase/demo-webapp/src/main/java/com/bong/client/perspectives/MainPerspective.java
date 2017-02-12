@@ -1,10 +1,12 @@
 package com.bong.client.perspectives;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 
 import org.uberfire.client.annotations.Perspective;
 import org.uberfire.client.annotations.WorkbenchPerspective;
 import org.uberfire.client.workbench.panels.impl.MultiListWorkbenchPanelPresenter;
+import org.uberfire.client.workbench.widgets.menu.WorkbenchMenuBarPresenter;
 import org.uberfire.mvp.impl.DefaultPlaceRequest;
 import org.uberfire.workbench.model.PerspectiveDefinition;
 import org.uberfire.workbench.model.impl.PartDefinitionImpl;
@@ -13,6 +15,7 @@ import org.uberfire.workbench.model.impl.PerspectiveDefinitionImpl;
 @ApplicationScoped
 @WorkbenchPerspective(identifier = "MainPerspective", isDefault = true)
 public class MainPerspective {
+	
 
     @Perspective
     public PerspectiveDefinition buildPerspective() {

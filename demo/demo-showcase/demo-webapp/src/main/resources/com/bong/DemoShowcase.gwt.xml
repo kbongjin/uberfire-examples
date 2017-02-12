@@ -10,6 +10,8 @@
   <inherits name="org.uberfire.UberfireWorkbenchBackend"/>
 
   <inherits name="org.uberfire.client.views.PatternFly"/>
+  
+  <inherits name="org.gwtbootstrap3.extras.notify.Notify"/>
 
   <inherits name="com.bong.component.DemoComponentClient"/>
   <!-- Specify the paths for translatable code -->

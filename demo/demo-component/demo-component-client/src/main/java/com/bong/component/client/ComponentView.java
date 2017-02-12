@@ -2,14 +2,22 @@ package com.bong.component.client;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.Dependent;
+import javax.inject.Inject;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 
 import org.gwtbootstrap3.client.ui.Button;
 import org.gwtbootstrap3.client.ui.Label;
+import org.gwtbootstrap3.client.ui.constants.IconType;
+import org.gwtbootstrap3.extras.notify.client.constants.NotifyType;
+import org.gwtbootstrap3.extras.notify.client.ui.Notify;
+import org.uberfire.client.workbench.widgets.notifications.NotificationManager;
+import org.uberfire.workbench.events.NotificationEvent;
+import org.uberfire.workbench.events.NotificationEvent.NotificationType;
 
 @Dependent
 public class ComponentView extends Composite implements ComponentPresenter.View {
@@ -25,6 +33,13 @@ public class ComponentView extends Composite implements ComponentPresenter.View 
     private Label label3 = new Label( "Empty" );
     
     private Button btn = new Button("spring jpa test");
+    
+    private Button btn2 = new Button("toast test");
+    
+    private ToastNotificationView tNotiView = new ToastNotificationView();
+    
+    @Inject
+    private NotificationManager notificationManager;
 
     @PostConstruct
     public void setup() {
@@ -33,6 +48,8 @@ public class ComponentView extends Composite implements ComponentPresenter.View 
         container.add( label2 );
         container.add( label3 );
         container.add(btn);
+        container.add(btn2);
+        //container.add(tNotiView);
         
         
         btn.addClickHandler(new ClickHandler(){
@@ -40,6 +57,26 @@ public class ComponentView extends Composite implements ComponentPresenter.View 
 			@Override
 			public void onClick(ClickEvent event) {
 				presenter.testJPA();
+			}
+        });
+        
+        btn2.addClickHandler(new ClickHandler(){
+
+			@Override
+			public void onClick(ClickEvent event) {
+				
+				//notificationManager.addNotification( new NotificationEvent( message, NotificationType.WARNING ) );
+				Notify.notify("알림", "noti!!!", IconType.INFO, NotifyType.SUCCESS);
+				/*
+				tNotiView.setPopupPosition(100, 100);
+				tNotiView.setNotification("noti!!!!");
+				tNotiView.show(new Command() {
+					
+					@Override
+					public void execute() {
+						
+					}
+				});*/
 			}
         });
     }
