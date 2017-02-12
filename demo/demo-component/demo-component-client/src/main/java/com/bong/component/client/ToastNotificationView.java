@@ -3,12 +3,6 @@
  */
 package com.bong.component.client;
 
-import org.jboss.errai.ui.shared.api.annotations.Templated;
-import org.uberfire.client.workbench.widgets.animations.LinearFadeInAnimation;
-import org.uberfire.client.workbench.widgets.animations.Pause;
-import org.uberfire.client.workbench.widgets.animations.Sequencer;
-
-import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.ui.DecoratedPopupPanel;
 
 /**
@@ -21,12 +15,12 @@ import com.google.gwt.user.client.ui.DecoratedPopupPanel;
  *
  */
 public class ToastNotificationView extends DecoratedPopupPanel {
-	
+	/*
 	private final BongAlert notification = new BongAlert();
 
-	/**
+	*//**
 	 * 
-	 */
+	 *//*
 	public ToastNotificationView() {
 		setWidget( notification );
         notification.setDismissable( true );
@@ -64,6 +58,6 @@ public class ToastNotificationView extends DecoratedPopupPanel {
         s.add( fadeInAnimation, 1000 );
         s.add( pauseAnimation, 2000 );
         s.run();
-    }
+    }*/
 
 }
